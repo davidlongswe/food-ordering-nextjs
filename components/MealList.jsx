@@ -2,7 +2,7 @@ import React from "react";
 import styles from "../styles/MealList.module.css";
 import MealCard from "./MealCard";
 
-const MealList = () => {
+const MealList = ({ mealList }) => {
   return (
     <div className={styles.container}>
       <h1 className={styles.title}>THE BEST THAI IN TOWN</h1>
@@ -13,18 +13,9 @@ const MealList = () => {
         eveniet! Explicabo.
       </p>
       <div className={styles.wrapper}>
-        <MealCard />
-        <MealCard />
-        <MealCard />
-        <MealCard />
-        <MealCard />
-        <MealCard />
-        <MealCard />
-        <MealCard />
-        <MealCard />
-        <MealCard />
-        <MealCard />
-        <MealCard />
+        {mealList.map((meal) => (
+          <MealCard key={meal._id} meal={meal} />
+        ))}
       </div>
     </div>
   );

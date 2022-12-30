@@ -11,6 +11,12 @@
   flex: 1;
 }
 
+.imgContainer {
+  width: 100px;
+  height: 100px;
+  position: relative;
+}
+
 .table {
   width: 100%;
   border-spacing: 20px;
@@ -25,12 +31,6 @@
 .total {
   font-weight: 500;
   font-size: 18px;
-}
-
-.imgContainer {
-  width: 100px;
-  height: 100px;
-  position: relative;
 }
 
 .wrapper {
@@ -78,17 +78,18 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     margin-bottom: 20px;
-  }
-
-  .name,
-  .total {
-    font-size: 24px;
   }
 
   .imgContainer {
     width: 35vw;
     height: 35vw;
+  }
+
+  .name,
+  .total {
+    font-size: 24px;
   }
 
   .extras,
@@ -113,4 +114,19 @@
   .wrapper {
     width: 100%;
   }
+}
+
+.paymentMethods {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+.payButton {
+  padding: 10px 5px;
+  cursor: pointer;
+  margin-bottom: 5px;
+  background-color: white;
+  color: teal;
+  font-weight: bold;
 }
